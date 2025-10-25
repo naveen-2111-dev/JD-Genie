@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { FileText, Sparkles, CheckCircle2 } from 'lucide-react';
+import { FileText, CheckCircle2, ArrowRightCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 const GetResume = () => {
@@ -108,15 +108,15 @@ const GetResume = () => {
                     <div className="flex items-center justify-center gap-8 text-gray-400">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="w-5 h-5 text-teal-600" />
-                            <span className="text-sm font-medium text-gray-600">ATS-Friendly</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-teal-600" />
                             <span className="text-sm font-medium text-gray-600">Free to Use</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="w-5 h-5 text-teal-600" />
                             <span className="text-sm font-medium text-gray-600">Match job with ease</span>
+                        </div>
+                        <div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
+                            <ArrowRightCircle className="w-5 h-5 text-teal-600" />
+                            <span className="text-sm font-medium text-gray-600">Skip</span>
                         </div>
                     </div>
                 </div>

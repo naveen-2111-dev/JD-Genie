@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import ReCaptchaProvider from "@/provider/RecaptchaProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const workSans = Work_Sans({
   weight: "400",
@@ -21,7 +23,10 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} text-teal-800`}
       >
-        {children}
+        <ReCaptchaProvider>
+          <Toaster />
+          {children}
+        </ReCaptchaProvider>
       </body>
     </html>
   );
